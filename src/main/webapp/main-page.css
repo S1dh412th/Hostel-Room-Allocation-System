@@ -1,0 +1,31 @@
+div{
+    padding: 7px;
+    display: block;
+    text-align: center;
+}
+
+body{
+  	background: url(image/roombb.png) no-repeat center;
+  	background-size: cover;
+}
+
+.bg{
+	filter: blur(8px);
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    height: 50%;
+    width: 50%;
+    border: 3px solid black;
+}
+
+select, input {
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+}

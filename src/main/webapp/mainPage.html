@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Room selection</title>
+  <link rel="stylesheet" href="main-page.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<script >
+function display_layout() {
+    var fl = document.getElementById("floor").value;
+    var wn = document.getElementById("wing").value;
+
+    if (fl==1 && wn==1)
+    document.getElementById("layout").src = "image/w1f1.png";
+    if (fl==1 && wn==2)
+    document.getElementById("layout").src = "image/w2f1.png";
+    if (fl==2 && wn==1)
+    document.getElementById("layout").src = "image/w1f2.png";
+    if (fl==2 && wn==2)
+    document.getElementById("layout").src = "image/w2f2.png";
+}
+</script>
+
+<h1>Hostel Sharavati</h1>
+
+<div>
+  <form action= "showTable.jsp">
+    <select name="floor" id="floor" onchange=display_layout() onfocus="">
+      <option disabled selected value="null" hidden> -- select Floor -- </option>
+      <option value="1">1st Floor</option>
+      <option value="2">2nd Floor</option>
+    </select>
+    <select name="wing" id="wing" onchange=display_layout()>
+      <option hidden disabled selected value="null"> -- select Wing -- </option>
+      <option value="1">1st Wing</option>
+      <option value="2">2nd Wing</option>
+    </select><br><br>
+    <img src="image/hostel.png" id="layout"> <br><br>
+    <input type="submit" value="Submit"><br><br>
+  </form>
+</div>
+
+
+  
+</body>
+
+</html>
